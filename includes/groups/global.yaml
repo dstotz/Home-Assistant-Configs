@@ -5,5 +5,6 @@ family:
 
 derek:
   name: Derek
-  # entities:
-  #   - device_tracker.derek_phone
+  entities:
+    - device_tracker.modphone
+    - device_tracker.okiedokieiguess_modphone

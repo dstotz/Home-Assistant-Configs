@@ -1,6 +1,6 @@
 homeassistant:
   # Name of the location where Home Assistant is running
-  name: Derek's House
+  name: Home
   # Location required to calculate the time the sun rises and sets
   latitude: !secret home_latitude
   longitude: !secret home_longitude
@@ -13,9 +13,6 @@ homeassistant:
   # Loads customizations
   customize: !include includes/customizations.yaml
 
-# Show links to resources in log and frontend
-introduction:
-
 # Enables the frontend
 frontend:
 
@@ -23,16 +20,10 @@ frontend:
 config:
 
 http:
-  # Uncomment this to add a password (recommended!)
-  # api_password: PASSWORD
-  # Uncomment this if you are using SSL or running in Docker etc
-  # base_url: example.duckdns.org:8123
+  api_password: !secret homeassistant_password
 
 # Checks for available updates
 updater:
-
-# Discover some devices automatically
-discovery:
 
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
@@ -46,6 +37,17 @@ logbook:
 # Track the sun
 sun:
 
+# MQTT embedded broker
+mqtt:
+  embedded:
+    listeners:
+      default:
+        max-connections: 500
+        type: tcp
+        bind: 127.0.0.1:1888
+  broker: 127.0.0.1
+  port: 1888
+
 # Text to speech
 tts:
   - platform: google
@@ -54,14 +56,14 @@ tts:
 # ZONES #
 #########
 zone 1:
-  name: Home
+  name: Derek Home
   latitude: !secret home_latitude
   longitude: !secret home_longitude
   radius: 250
   icon: mdi:home
 
 zone 2:
-  name: Brent Work
+  name: Derek Work
   latitude: !secret work_latitude
   longitude: !secret work_longitude
   radius: 250
@@ -76,7 +78,7 @@ switch: !include includes/switches.yaml
 sensor: !include includes/sensors.yaml
 device_tracker: !include includes/device_trackers.yaml
 media_player: !include includes/media_players.yaml
-# scene: !include includes/scenes.yaml
+scene: !include includes/scenes.yaml
 # notify: !include includes/notify.yaml
 # script: !include_dir_named includes/scripts
 # automation: !include_dir_merge_list includes/automation

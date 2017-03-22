@@ -3,33 +3,24 @@
   name: Living Room
   gpio: 17
   switches:
-    Living Room Left:
+    living_room_left:
       protocol: 1
       pulselength: 186
       code_on: 123456
       code_off: 123456
-    Living Room Right:
+    living_room_right:
       protocol: 1
       pulselength: 186
       code_on: 123456
       code_off: 123456
-    Living Room All:
-      protocol: 1
-      pulselength: 186
-      code_on: 123456, 123456
-      code_off: 123456, 123456
-    Bedroom:
+    bedroom:
       protocol: 1
       pulselength: 186
       code_on: 123456
       code_off: 123456
-    Charging Stand:
+    charging_stand:
       protocol: 1
       pulselength: 186
       code_on: 123456
       code_off: 123456
-    All:
-      protocol: 1
-      pulselength: 186
-      code_on: 123456, 123456
-      code_off: 123456, 123456
+      

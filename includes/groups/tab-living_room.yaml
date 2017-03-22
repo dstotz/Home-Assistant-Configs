@@ -1,35 +1,26 @@
-main_living:
+living_room:
   name: Living Room
   view: yes
-  # entities:
-  #   - group.living_lights
-  #   - group.living_lighting
-  #   - media_player.living_room
-  #   - media_player.roku_2n0069550469
-  #   - media_player.lgroku_tv__2n0069550469
-  #   - group.kitchen_lights
-  #   - group.kitchen_lighting
-  #   - group.laundry_room_lights
-  #   - group.laundry_room_sensors
-  #   - group.living_room_outlets
+  entities:
+    - group.living_lights
+    - group.living_lighting
+    - group.living_outlets
+    - media_player.modboxone
+  
+# LIVING ROOM
+living_lights:
+  name: Living Room Lights
+  entities:
+    - switch.living_room_left
+    - switch.living_room_right
 
-# # LIVING ROOM
-# living_lights:
-#   name: Living Room Lights
-#   entities:
-#     - light.living__br
-#     - light.living__bl
-#     - light.living__fr
-#     - light.living__fl
+living_lighting:
+  name: Living Room Lighting
+  entities:
+    - scene.living_normal
+    - scene.living_movie
 
-# living_lighting:
-#   name: Living Lighting
-#   entities:
-#     - scene.living_normal
-#     - scene.living_movie
-#     - scene.living_dim
-
-# living_room_outlets:
-#  name: Living Room Outlets
-#  entities:
-#    switch.app_outlet_1_switch_10_0
+living_outlets:
+  name: Living Room Outlets
+  entities:
+    - switch.charging_stand

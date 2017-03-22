@@ -12,6 +12,9 @@
 
 # Plex num active users
 - platform: plex
+  host: !secret server_ip
+  username: !secret plex_username
+  password: !secret plex_password
 
 # Xbox Live track my profile
 - platform: xbox_live
@@ -30,11 +33,19 @@
 - platform: google_travel_time
   name: Derek Work Commute
   api_key: !secret google_api_key
-  origin: Home
-  destination: Work
+  origin: zone.derek_home
+  destination: zone.derek_work
 
 - platform: google_travel_time
   name: Derek Home Commute
   api_key: !secret google_api_key
-  origin: Work
-  destination: Home
+  origin: zone.derek_work
+  destination: zone.derek_home
+
+# Owntracks Battery
+- platform: mqtt
+  state_topic: "owntracks/modphone"
+  name: "Derek Phone Battery"
+  qos: 0
+  unit_of_measurement: "%"
+  value_template: '{{ value_json.batt }}'

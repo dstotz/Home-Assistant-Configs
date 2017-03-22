@@ -1,0 +1,29 @@
+###############
+# LIVING ROOM #
+###############
+- name: Living Normal
+  entities:
+    group.living_lights:
+      state: on
+    group.living_outlets:
+      state: on
+
+- name: Living Movie
+  entities:
+    group.living_lights:
+      state: off
+    group.living_outlets:
+      state: off
+
+##################
+# MASTER BEDROOM #
+##################
+- name: Bedroom Normal
+  entities:
+    group.bedroom_lights:
+      state: on
+
+- name: Bedroom Sleep
+  entities:
+    group.bedroom_lights:
+      state: off

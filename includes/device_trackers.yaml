@@ -1,5 +1,7 @@
 # Uses router to detect when I am home based on phone being connected to wifi
 - platform: netgear
   host: 192.168.1.1
-  username: admin
-  password: derekok15
+  username: !secret netgear_username
+  password: !secret netgear_password
+
+- platform: owntracks

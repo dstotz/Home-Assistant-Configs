@@ -4,26 +4,39 @@ default_view:
     - group.weather
     - group.family_info
     - group.travel_times
+    - group.lights
 
 family_info:
   name: Family Info
   entities:
     - group.derek
-
-weather:
-  name: weather
-  entities:
-    - sensor.dark_sky_summary
-    - sensor.dark_sky_temperature
-    - sensor.dark_sky_humidity
-    - sensor.dark_sky_precip
-    - sensor.dark_sky_precip_probability
+    - sensor.derek_phone_battery
 
 travel_times:
   name: Travel Times
   entities:
     - sensor.derek_home_commute
     - sensor.derek_work_commute
+
+lights:
+  name: Lights
+  entities:
+    - group.living_lights
+    - group.bedroom_lights
+
+outlets:
+  name: Outlets
+  entities:
+    - group.living_outlets
+
+weather:
+  name: Weather
+  entities:
+    - sensor.dark_sky_summary
+    - sensor.dark_sky_temperature
+    - sensor.dark_sky_humidity
+    - sensor.dark_sky_precip
+    - sensor.dark_sky_precip_probability
 
 # surveilance:
 #   name: Surveilance
