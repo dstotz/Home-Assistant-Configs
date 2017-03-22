@@ -1,0 +1,3 @@
+# Plex remote control
+- platform: plex
+  host: 73.142.230.199

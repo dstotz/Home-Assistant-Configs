@@ -1,0 +1,83 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Derek's House
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 13
+  # metric for Metric, imperial for Imperial
+  unit_system: imperial
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: America/New_York
+  # Loads customizations
+  customize: !include includes/customizations.yaml
+
+# Show links to resources in log and frontend
+introduction:
+
+# Enables the frontend
+frontend:
+
+# Enables configuration UI
+config:
+
+http:
+  # Uncomment this to add a password (recommended!)
+  # api_password: PASSWORD
+  # Uncomment this if you are using SSL or running in Docker etc
+  # base_url: example.duckdns.org:8123
+
+# Checks for available updates
+updater:
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time.
+history:
+
+# View all events in a logbook
+logbook:
+
+# Track the sun
+sun:
+
+# Text to speech
+tts:
+  - platform: google
+
+#########
+# ZONES #
+#########
+zone 1:
+  name: Home
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  radius: 250
+  icon: mdi:home
+
+zone 2:
+  name: Brent Work
+  latitude: !secret work_latitude
+  longitude: !secret work_longitude
+  radius: 250
+  icon: mdi:briefcase
+
+
+############
+# INCLUDES #
+############
+group: !include_dir_merge_named includes/groups
+switch: !include includes/switches.yaml
+sensor: !include includes/sensors.yaml
+device_tracker: !include includes/device_trackers.yaml
+media_player: !include includes/media_players.yaml
+# scene: !include includes/scenes.yaml
+# notify: !include includes/notify.yaml
+# script: !include_dir_named includes/scripts
+# automation: !include_dir_merge_list includes/automation
+# camera: !include includes/cameras.yaml

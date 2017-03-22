@@ -1,0 +1,8 @@
+group.default_view:
+  order: 1
+group.living_room:
+  order: 2
+group.master_bedroom:
+  order: 3
+group.settings:
+  order: 4

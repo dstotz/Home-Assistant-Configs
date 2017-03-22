@@ -1,0 +1,35 @@
+# 433 mhz rf light switches
+- platform: rpi_rf
+  name: Living Room
+  gpio: 17
+  switches:
+    Living Room Left:
+      protocol: 1
+      pulselength: 186
+      code_on: 123456
+      code_off: 123456
+    Living Room Right:
+      protocol: 1
+      pulselength: 186
+      code_on: 123456
+      code_off: 123456
+    Living Room All:
+      protocol: 1
+      pulselength: 186
+      code_on: 123456, 123456
+      code_off: 123456, 123456
+    Bedroom:
+      protocol: 1
+      pulselength: 186
+      code_on: 123456
+      code_off: 123456
+    Charging Stand:
+      protocol: 1
+      pulselength: 186
+      code_on: 123456
+      code_off: 123456
+    All:
+      protocol: 1
+      pulselength: 186
+      code_on: 123456, 123456
+      code_off: 123456, 123456

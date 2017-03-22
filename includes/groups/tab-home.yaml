@@ -1,0 +1,32 @@
+default_view:
+  view: yes
+  entities:
+    - group.weather
+    - group.family_info
+    - group.travel_times
+
+family_info:
+  name: Family Info
+  entities:
+    - group.derek
+
+weather:
+  name: weather
+  entities:
+    - sensor.dark_sky_summary
+    - sensor.dark_sky_temperature
+    - sensor.dark_sky_humidity
+    - sensor.dark_sky_precip
+    - sensor.dark_sky_precip_probability
+
+travel_times:
+  name: Travel Times
+  entities:
+    - sensor.derek_home_commute
+    - sensor.derek_work_commute
+
+# surveilance:
+#   name: Surveilance
+#   entities:
+#     - camera.living_room
+#     - sensor.camera__living_room

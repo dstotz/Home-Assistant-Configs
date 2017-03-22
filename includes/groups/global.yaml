@@ -1,0 +1,9 @@
+family:
+  name: Family
+  entities:
+    - group.derek
+
+derek:
+  name: Derek
+  # entities:
+  #   - device_tracker.derek_phone

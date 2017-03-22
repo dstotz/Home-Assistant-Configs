@@ -1,0 +1,61 @@
+settings:
+  name: Settings
+  view: yes
+  icon: mdi:settings
+  # entities:
+  #   - group.global_settings
+  #   - group.notification_settings
+  #   - group.kitchen_settings
+  #   - group.living_room_settings
+  #   - group.office_settings
+  #   - group.master_bedroom_settings
+  #   - group.laundry_room_settings
+  #   - group.dash_buttons
+
+# global_settings:
+#   name: Global
+#   entities:
+#     - automation.arriving_home
+#     - automation.nobody_home
+#     - automation.nest_while_home
+
+# notification_settings:
+#   name: Notifications
+#   entities:
+#     - automation.brent_leave_work
+#     - automation.emma_leave_home
+#     - automation.front_door_motion
+#     - automation.driveway_motion
+#     - automation.laundry_room_motion_sensor_battery_low
+
+# master_bedroom_settings:
+#   name: Master Bedroom
+#   entities:
+#     - automation.wakeup__work
+
+# kitchen_settings:
+#   name: Kitchen
+#   entities:
+#     - automation.kitchen_study_on
+
+# living_room_settings:
+#   name: Living Room
+#   entities:
+#     - automation.living_room_media
+
+# office_settings:
+#   name: Office
+#   entities:
+#     - automation.office_media
+
+# laundry_room_settings:
+#   name: Laundry Room
+#   entities:
+#     - automation.turn_on_laundry_room_light_with_motion
+
+
+# dash_buttons:
+#   name: Dash Buttons
+#   entities:
+#     - automation.dash_button__gatorade
+#     - automation.dash_button__on

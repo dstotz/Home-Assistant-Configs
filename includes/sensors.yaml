@@ -1,0 +1,40 @@
+# Dark Sky weather tracking
+- platform: darksky
+  api_key: !secret dark_sky_api_key
+  monitored_conditions:
+    - summary
+    - precip_type
+    - precip_probability
+    - temperature
+    - humidity
+    - temperature_max
+    - temperature_min
+
+# Plex num active users
+- platform: plex
+
+# Xbox Live track my profile
+- platform: xbox_live
+  api_key: !secret xbox_live_api_key
+  xuid:
+    - !secret derek_xbox_xuid
+
+# Tracks CPU speed for PI server
+- platform: cpuspeed
+  name: Raspberry Pi
+
+# Weather Prediction
+- platform: yr
+
+# Google Maps travel times
+- platform: google_travel_time
+  name: Derek Work Commute
+  api_key: !secret google_api_key
+  origin: Home
+  destination: Work
+
+- platform: google_travel_time
+  name: Derek Home Commute
+  api_key: !secret google_api_key
+  origin: Work
+  destination: Home
